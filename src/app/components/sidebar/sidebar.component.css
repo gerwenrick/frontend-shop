@@ -1,0 +1,24 @@
+aside {
+  position: fixed;
+  right: 0;
+  top: 56px;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 0.5rem;
+  width: var(--sidebar-width);
+  height: 100%;
+  border: 1px solid var(--primary-color-light);
+  background-color: var(--background-body);
+  box-shadow: var(--box-shadow-medium);
+  transition: 0.1s ease-in-out all;
+  overflow: hidden;
+
+  &.hideSidebar {
+    width: 0;
+    right: calc(-1rem - 2px);
+
+    &:after {
+      display: none;
+    }
+  }
+}

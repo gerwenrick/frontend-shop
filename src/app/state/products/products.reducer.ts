@@ -7,14 +7,12 @@ export const PRODUCT_FEATURE_KEY = 'products';
 export type ProductFeatureState = {
   shopName: string;
   shopKeeper: string;
-  productCount: number;
   items: Product[];
 };
 
 export const initialProductsState: ProductFeatureState = {
   shopName: '',
   shopKeeper: '',
-  productCount: 0,
   items: [],
 };
 
