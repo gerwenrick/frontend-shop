@@ -18,10 +18,19 @@
       </ng-template>
 
       <ng-template #productAction>
-        <rvg-button
-          buttonText="Add to wishlist"
-          (buttonClick)="addToWishlist(product.id)"
-        ></rvg-button>
+        @if (!(isProductInWishlist$(product.id) | async)) {
+          <rvg-button
+            buttonText="Add to wishlist"
+            (buttonClick)="addToWishlist(product.id)"
+            [isAdding]="true"
+          ></rvg-button>
+        } @else {
+          <rvg-button
+            buttonText="Remove to from"
+            (buttonClick)="removeFromWishlist(product.id)"
+            [isAdding]="false"
+          ></rvg-button>
+        }
       </ng-template>
     </li>
   }

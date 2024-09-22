@@ -15,11 +15,23 @@ button {
   text-decoration: none;
   transition: 0.15s ease-in-out all;
   vertical-align: baseline;
+  font-size: var(--font-size-default);
+}
+
+.button-primary {
   background-color: var(--primary-color);
   color: var(--white);
-  font-size: var(--font-size-default);
 
   &:hover {
     background-color: var(--primary-color-dark);
+  }
+}
+
+.button-secondary {
+  background-color: var(--secondary-color);
+  color: var(--white);
+
+  &:hover {
+    background-color: var(--secondary-color-dark);
   }
 }

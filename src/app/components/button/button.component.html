@@ -1,4 +1,7 @@
-<button (click)="emitClickEvent($event)">
+<button
+  (click)="emitClickEvent($event)"
+  [class]="isAdding() ? 'button-primary' : 'button-secondary'"
+>
   {{ buttonText() }}
-  <fa-icon [icon]="faHeart"></fa-icon>
+  <fa-icon [icon]="isAdding() ? faHeart : faTrash"></fa-icon>
 </button>
