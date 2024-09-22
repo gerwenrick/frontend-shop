@@ -2,7 +2,7 @@
   "shopName": "UI Component Hub",
   "shopKeeper": "Rick van Gerwen",
   "productCount": 20,
-  "products": [
+  "items": [
     {
       "id": "1",
       "name": "Button Component",

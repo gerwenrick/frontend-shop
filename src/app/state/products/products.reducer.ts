@@ -1,24 +1,27 @@
-import { createReducer } from '@ngrx/store';
+import { createReducer, on } from '@ngrx/store';
+import { getAllProductsSuccessAction } from './actions/products.actions';
 import { Product } from './types/product.type';
 
 export const PRODUCT_FEATURE_KEY = 'products';
 
-export const initialProductsState: Product[] = [
-  {
-    id: 0,
-    name: '',
-    description: '',
-    rating: 0,
-    price: 0,
-    categories: [],
-    tags: [],
-    imageUrl: '',
-    stock: 0,
-    isFeatured: false,
-    discount: 0,
-    wishlist: false,
-    reviews: [],
-  },
-];
+export type ProductFeatureState = {
+  shopName: string;
+  shopKeeper: string;
+  productCount: number;
+  items: Product[];
+};
 
-export const productsReducer = createReducer(initialProductsState);
+export const initialProductsState: ProductFeatureState = {
+  shopName: '',
+  shopKeeper: '',
+  productCount: 0,
+  items: [],
+};
+
+export const productsReducer = createReducer(
+  initialProductsState,
+  on(getAllProductsSuccessAction, (state, { products }) => ({
+    ...state,
+    items: products,
+  })),
+);
