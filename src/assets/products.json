@@ -1,0 +1,308 @@
+{  
+  "shopName": "UI Component Hub",
+  "shopKeeper": "Rick van Gerwen",
+  "productCount": 20,
+  "products": [
+    {
+      "id": "1",
+      "name": "Button Component",
+      "description": "A customizable button for UI interactions.",
+      "rating": 4.7,
+      "price": 10.99,
+      "categories": ["UI", "Component", "Interaction"],
+      "tags": ["clickable", "button", "interactive", "primary", "secondary"],
+      "imageUrl": "https://example.com/button.png",
+      "stock": 150,
+      "isFeatured": true,
+      "discount": 0.1,
+      "wislist": false,
+      "reviews": [
+        { "reviewer": "Alice", "rating": 5, "comment": "Works perfectly with any theme!" },
+        { "reviewer": "Bob", "rating": 4, "comment": "Simple to use but lacks some features." }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Card Component",
+      "description": "A UI card with customizable content areas.",
+      "rating": 4.5,
+      "price": 15.99,
+      "categories": ["UI", "Component", "Layout"],
+      "tags": ["card", "content", "image", "text"],
+      "imageUrl": "https://example.com/card.png",
+      "stock": 90,
+      "isFeatured": false,
+      "discount": 0.05,
+      "wislist": false,
+      "reviews": [
+        { "reviewer": "Charlie", "rating": 4, "comment": "Nice design but could be more flexible." },
+        { "reviewer": "Diana", "rating": 5, "comment": "Perfect for showcasing content!" }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Link Component",
+      "description": "A simple link for navigating between pages.",
+      "rating": 4.3,
+      "price": 5.49,
+      "categories": ["UI", "Component", "Navigation"],
+      "tags": ["link", "clickable", "navigation"],
+      "imageUrl": "https://example.com/link.png",
+      "stock": 300,
+      "isFeatured": false,
+      "reviews": [
+        { "reviewer": "Eve", "rating": 4, "comment": "Easy to style, works well." }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Image Component",
+      "description": "A responsive image component for displaying images.",
+      "rating": 4.8,
+      "price": 9.99,
+      "categories": ["UI", "Component", "Media"],
+      "tags": ["image", "responsive", "media"],
+      "imageUrl": "https://example.com/image.png",
+      "stock": 200,
+      "isFeatured": true,
+      "wislist": false,
+      "reviews": [
+        { "reviewer": "Frank", "rating": 5, "comment": "Handles various image sizes perfectly!" },
+        { "reviewer": "Grace", "rating": 4, "comment": "Could use more customization options." }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "List Component",
+      "description": "A component for displaying a list of items.",
+      "rating": 4.6,
+      "price": 12.99,
+      "categories": ["UI", "Component", "Display"],
+      "tags": ["list", "items", "display"],
+      "imageUrl": "https://example.com/list.png",
+      "stock": 100,
+      "isFeatured": false,
+      "reviews": [
+        { "reviewer": "Hank", "rating": 5, "comment": "Flexible and easy to use." }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Navigation Component",
+      "description": "A navigation bar for user interaction.",
+      "rating": 4.9,
+      "price": 19.99,
+      "categories": ["UI", "Component", "Navigation"],
+      "tags": ["navbar", "navigation", "menu"],
+      "imageUrl": "https://example.com/navigation.png",
+      "stock": 80,
+      "isFeatured": true,
+      "discount": 0.15,
+      "wislist": false,
+      "reviews": [
+        { "reviewer": "Ivy", "rating": 5, "comment": "Great for multi-page websites!" },
+        { "reviewer": "Jake", "rating": 5, "comment": "Very customizable and responsive." }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Container Component",
+      "description": "A flexible container for grouping UI elements.",
+      "rating": 4.4,
+      "price": 7.49,
+      "categories": ["UI", "Component", "Layout"],
+      "tags": ["container", "group", "layout"],
+      "imageUrl": "https://example.com/container.png",
+      "stock": 220,
+      "isFeatured": false,
+      "wislist": false
+    },
+    {
+      "id": "8",
+      "name": "Tooltip Component",
+      "description": "A tooltip for providing additional information on hover.",
+      "rating": 4.5,
+      "price": 6.99,
+      "categories": ["UI", "Component", "Interaction"],
+      "tags": ["tooltip", "hover", "information"],
+      "imageUrl": "https://example.com/tooltip.png",
+      "stock": 250,
+      "isFeatured": false,
+      "wislist": false
+    },
+    {
+      "id": "9",
+      "name": "Avatar Component",
+      "description": "An avatar component for displaying user images or icons.",
+      "rating": 4.9,
+      "price": 8.99,
+      "categories": ["UI", "Component", "User"],
+      "tags": ["avatar", "user", "image"],
+      "imageUrl": "https://example.com/avatar.png",
+      "stock": 120,
+      "isFeatured": true,
+      "wislist": false,
+      "reviews": [
+        { "reviewer": "Liam", "rating": 5, "comment": "Perfect for profile pictures!" }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Input Component",
+      "description": "An input field for user data entry.",
+      "rating": 4.7,
+      "price": 6.49,
+      "categories": ["UI", "Component", "Forms"],
+      "tags": ["input", "field", "form"],
+      "imageUrl": "https://example.com/input.png",
+      "stock": 300,
+      "isFeatured": false,
+      "wislist": false
+    },
+    {
+      "id": "11",
+      "name": "Form Component",
+      "description": "A customizable form for data collection.",
+      "rating": 4.6,
+      "price": 15.99,
+      "categories": ["UI", "Component", "Forms"],
+      "tags": ["form", "input", "submission"],
+      "imageUrl": "https://example.com/form.png",
+      "stock": 80,
+      "isFeatured": true,
+      "wislist": false,
+      "reviews": [
+        { "reviewer": "Mona", "rating": 5, "comment": "Handles data well!" }
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Checkbox Component",
+      "description": "A checkbox for selection purposes.",
+      "rating": 4.3,
+      "price": 3.99,
+      "categories": ["UI", "Component", "Forms"],
+      "tags": ["checkbox", "selection", "form"],
+      "imageUrl": "https://example.com/checkbox.png",
+      "stock": 400,
+      "isFeatured": false,
+      "wislist": false
+    },
+    {
+      "id": "13",
+      "name": "Radiobutton Component",
+      "description": "A radio button for selecting a single option from multiple.",
+      "rating": 4.5,
+      "price": 4.99,
+      "categories": ["UI", "Component", "Forms"],
+      "tags": ["radiobutton", "option", "form"],
+      "imageUrl": "https://example.com/radiobutton.png",
+      "stock": 350,
+      "isFeatured": false,
+      "wislist": false
+    },
+    {
+      "id": "14",
+      "name": "Pill Component",
+      "description": "A pill-shaped badge for tagging or highlighting content.",
+      "rating": 4.8,
+      "price": 3.99,
+      "categories": ["UI", "Component", "Display"],
+      "tags": ["pill", "badge", "highlight"],
+      "imageUrl": "https://example.com/pill.png",
+      "stock": 140,
+      "isFeatured": true
+    },
+    {
+      "id": "15",
+      "name": "Snackbar Component",
+      "description": "A snackbar for providing temporary messages.",
+      "rating": 4.2,
+      "price": 7.49,
+      "categories": ["UI", "Component", "Notifications"],
+      "tags": ["snackbar", "message", "notification"],
+      "imageUrl": "https://example.com/snackbar.png",
+      "stock": 180,
+      "isFeatured": false,
+      "wislist": false
+    },
+    {
+      "id": "16",
+      "name": "Icon Component",
+      "description": "A vector-based icon for use in UI designs.",
+      "rating": 4.9,
+      "price": 2.49,
+      "categories": ["UI", "Component", "Media"],
+      "tags": ["icon", "vector", "graphic"],
+      "imageUrl": "https://example.com/icon.png",
+      "stock": 500,
+      "isFeatured": true,
+      "discount": 0.2,
+      "wislist": false
+    },
+    {
+      "id": "17",
+      "name": "Overlay Component",
+      "description": "An overlay component for displaying content above the current screen.",
+      "rating": 4.4,
+      "price": 8.99,
+      "categories": ["UI", "Component", "Display"],
+      "tags": ["overlay", "modal", "popup"],
+      "imageUrl": "https://example.com/overlay.png",
+      "stock": 110,
+      "isFeatured": false,
+      "wislist": false
+    },
+    {
+      "id": "18",
+      "name": "Sidenav Component",
+      "description": "A side navigation bar for user interaction.",
+      "rating": 4.6,
+      "price": 12.99,
+      "categories": ["UI", "Component", "Navigation"],
+      "tags": ["sidenav", "navigation", "sidebar"],
+      "imageUrl": "https://example.com/sidenav.png",
+      "stock": 90,
+      "isFeatured": true
+    },
+    {
+      "id": "19",
+      "name": "Divider Component",
+      "description": "A divider for separating content areas.",
+      "rating": 4.3,
+      "price": 3.49,
+      "categories": ["UI", "Component", "Layout"],
+      "tags": ["divider", "separator", "layout"],
+      "imageUrl": "https://example.com/divider.png",
+      "stock": 300,
+      "isFeatured": false,
+      "wislist": false
+    },
+    {
+      "id": "20",
+      "name": "Date Component",
+      "description": "A versatile date picker for selecting dates or date ranges.",
+      "rating": 4.8,
+      "price": 11.99,
+      "categories": ["UI", "Component", "Forms"],
+      "tags": ["datepicker", "calendar", "input", "date", "range"],
+      "imageUrl": "https://example.com/datepicker.png",
+      "stock": 160,
+      "isFeatured": true,
+      "discount": 0.1,
+      "wislist": false,
+      "reviews": [
+        {
+          "reviewer": "Emily",
+          "rating": 5,
+          "comment": "Very easy to integrate and use!"
+        },
+        {
+          "reviewer": "Mark",
+          "rating": 4,
+          "comment": "Works great but could have more customization options."
+        }
+      ]
+    }
+  ]
+}
