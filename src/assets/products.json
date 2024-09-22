@@ -13,7 +13,7 @@
       "imageUrl": "https://example.com/button.png",
       "stock": 150,
       "discount": 0.1,
-      "wislist": false,
+      "wishlist": false,
       "reviews": [
         { "reviewer": "Alice", "rating": 5, "comment": "Works perfectly with any theme!" },
         { "reviewer": "Bob", "rating": 4, "comment": "Simple to use but lacks some features." }
@@ -30,7 +30,7 @@
       "imageUrl": "https://example.com/card.png",
       "stock": 90,
       "discount": 0.05,
-      "wislist": false,
+      "wishlist": false,
       "reviews": [
         { "reviewer": "Charlie", "rating": 4, "comment": "Nice design but could be more flexible." },
         { "reviewer": "Diana", "rating": 5, "comment": "Perfect for showcasing content!" }
@@ -46,6 +46,7 @@
       "tags": ["link", "clickable", "navigation"],
       "imageUrl": "https://example.com/link.png",
       "stock": 300,
+      "wishlist": false,
       "reviews": [
         { "reviewer": "Eve", "rating": 4, "comment": "Easy to style, works well." }
       ]
@@ -60,7 +61,7 @@
       "tags": ["image", "responsive", "media"],
       "imageUrl": "https://example.com/image.png",
       "stock": 200,
-      "wislist": false,
+      "wishlist": false,
       "reviews": [
         { "reviewer": "Frank", "rating": 5, "comment": "Handles various image sizes perfectly!" },
         { "reviewer": "Grace", "rating": 4, "comment": "Could use more customization options." }
@@ -76,6 +77,8 @@
       "tags": ["list", "items", "display"],
       "imageUrl": "https://example.com/list.png",
       "stock": 100,
+      "wishlist": false,
+
       "reviews": [
         { "reviewer": "Hank", "rating": 5, "comment": "Flexible and easy to use." }
       ]
@@ -91,7 +94,7 @@
       "imageUrl": "https://example.com/navigation.png",
       "stock": 80,
       "discount": 0.15,
-      "wislist": false,
+      "wishlist": false,
       "reviews": [
         { "reviewer": "Ivy", "rating": 5, "comment": "Great for multi-page websites!" },
         { "reviewer": "Jake", "rating": 5, "comment": "Very customizable and responsive." }
@@ -107,7 +110,7 @@
       "tags": ["container", "group", "layout"],
       "imageUrl": "https://example.com/container.png",
       "stock": 220,
-      "wislist": false
+      "wishlist": false
     },
     {
       "id": "8",
@@ -119,7 +122,7 @@
       "tags": ["tooltip", "hover", "information"],
       "imageUrl": "https://example.com/tooltip.png",
       "stock": 250,
-      "wislist": false
+      "wishlist": false
     },
     {
       "id": "9",
@@ -131,7 +134,7 @@
       "tags": ["avatar", "user", "image"],
       "imageUrl": "https://example.com/avatar.png",
       "stock": 120,
-      "wislist": false,
+      "wishlist": false,
       "reviews": [
         { "reviewer": "Liam", "rating": 5, "comment": "Perfect for profile pictures!" }
       ]
@@ -146,7 +149,7 @@
       "tags": ["input", "field", "form"],
       "imageUrl": "https://example.com/input.png",
       "stock": 300,
-      "wislist": false
+      "wishlist": false
     },
     {
       "id": "11",
@@ -158,7 +161,7 @@
       "tags": ["form", "input", "submission"],
       "imageUrl": "https://example.com/form.png",
       "stock": 80,
-      "wislist": false,
+      "wishlist": false,
       "reviews": [
         { "reviewer": "Mona", "rating": 5, "comment": "Handles data well!" }
       ]
@@ -173,8 +176,7 @@
       "tags": ["checkbox", "selection", "form"],
       "imageUrl": "https://example.com/checkbox.png",
       "stock": 400,
-      "isFeatured": false,
-      "wislist": false
+      "wishlist": false
     },
     {
       "id": "13",
@@ -186,7 +188,7 @@
       "tags": ["radiobutton", "option", "form"],
       "imageUrl": "https://example.com/radiobutton.png",
       "stock": 350,
-      "wislist": false
+      "wishlist": false
     },
     {
       "id": "14",
@@ -210,7 +212,7 @@
       "tags": ["snackbar", "message", "notification"],
       "imageUrl": "https://example.com/snackbar.png",
       "stock": 180,
-      "wislist": false
+      "wishlist": false
     },
     {
       "id": "16",
@@ -223,7 +225,7 @@
       "imageUrl": "https://example.com/icon.png",
       "stock": 500,
       "discount": 0.2,
-      "wislist": false
+      "wishlist": false
     },
     {
       "id": "17",
@@ -235,7 +237,7 @@
       "tags": ["overlay", "modal", "popup"],
       "imageUrl": "https://example.com/overlay.png",
       "stock": 110,
-      "wislist": false
+      "wishlist": false
     },
     {
       "id": "18",
@@ -259,7 +261,7 @@
       "tags": ["divider", "separator", "layout"],
       "imageUrl": "https://example.com/divider.png",
       "stock": 300,
-      "wislist": false
+      "wishlist": false
     },
     {
       "id": "20",
@@ -272,7 +274,7 @@
       "imageUrl": "https://example.com/datepicker.png",
       "stock": 160,
       "discount": 0.1,
-      "wislist": false,
+      "wishlist": false,
       "reviews": [
         {
           "reviewer": "Emily",

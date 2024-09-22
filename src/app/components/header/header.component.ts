@@ -3,9 +3,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { SidebarService } from '../../services/sidebar.service';
 import { Store } from '@ngrx/store';
-import { allProductsSelector } from '../../state/products/selectors/products.selectors';
 import { map, Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
+import { selectAllWishlistItems } from '../../state/products/selectors/products.selectors';
 
 @Component({
   selector: 'rvg-header',
@@ -23,6 +23,6 @@ export class HeaderComponent {
   private store: Store = inject(Store);
 
   public wishlistItems$: Observable<number> = this.store
-    .select(allProductsSelector())
-    .pipe(map((products) => products.length));
+    .select(selectAllWishlistItems())
+    .pipe(map((wishlistItems) => wishlistItems.length));
 }

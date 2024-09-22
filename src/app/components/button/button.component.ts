@@ -6,7 +6,11 @@ import {
   OutputEmitterRef,
 } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faHeart, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import {
+  faTrash,
+  faHeart,
+  IconDefinition,
+} from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'rvg-button',
   standalone: true,
@@ -16,7 +20,10 @@ import { faHeart, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 })
 export class ButtonComponent {
   public buttonText: InputSignal<string> = input.required<string>();
+  public isAdding: InputSignal<boolean> = input.required<boolean>();
+
   public faHeart: IconDefinition = faHeart;
+  public faTrash: IconDefinition = faTrash;
 
   public buttonClick: OutputEmitterRef<Event> = output<Event>();
 
