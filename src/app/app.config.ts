@@ -10,16 +10,19 @@ import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { appReducer } from './state/app.reducer';
+import { provideHttpClient } from '@angular/common/http';
+import { ProductsEffects } from './state/products/effects/products.effects';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideEffects([ProductsEffects]),
+    provideHttpClient(),
     provideRouter(routes),
     provideStore(appReducer),
-    provideEffects(),
     provideStoreDevtools({
       maxAge: 25,
       logOnly: !isDevMode(),
     }),
+    provideZoneChangeDetection({ eventCoalescing: true }),
   ],
 };

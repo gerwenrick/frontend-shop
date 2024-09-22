@@ -1,4 +1,9 @@
-import type { Review } from './review.type';
+export type ProductRespons = {
+  shopName: string;
+  shopKeeper: string;
+  productCount: number;
+  items: Product[];
+};
 
 export type Product = {
   id: number;
@@ -14,4 +19,10 @@ export type Product = {
   discount: number;
   wishlist: boolean;
   reviews?: Review[];
+};
+
+export type Review = {
+  reviewer: string;
+  rating: number;
+  comment: string;
 };

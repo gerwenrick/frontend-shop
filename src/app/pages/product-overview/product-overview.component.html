@@ -1,7 +1,13 @@
 <h1>Hello</h1>
 
-<pre>
+<!-- <pre>
   <code>
     {{ products$ | async | json }} 
   </code>
-</pre>
+</pre> -->
+
+@for (product of products$ | async; track product.id; let i = $index) {
+  <div>
+    <p>{{ product.name }}</p>
+  </div>
+}
