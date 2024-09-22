@@ -1,0 +1,25 @@
+button {
+  border-radius: var(--border-radius-small);
+  border-style: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 0.5rem 1rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.15s ease-in-out all;
+  vertical-align: baseline;
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-size: var(--font-size-default);
+
+  &:hover {
+    background-color: var(--primary-color-dark);
+  }
+}
