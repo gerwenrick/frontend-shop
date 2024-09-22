@@ -1,6 +1,11 @@
 <header>
   <div class="logo"></div>
   <nav class="favourites">
-    <fa-icon [icon]="faHeart"></fa-icon>
+    <fa-icon
+      [icon]="faHeart"
+      [attr.data-badge]="wishlistItems$ | async"
+      (click)="sidebarService.toggleSidebar()"
+      (keypress)="sidebarService.toggleSidebar()"
+    ></fa-icon>
   </nav>
 </header>

@@ -7,10 +7,11 @@ rvg-header {
 
 .grid-container {
   display: grid;
+  grid-template-columns: 1fr auto;
   grid-template-rows: 1fr auto;
   grid-template-areas:
-    "main"
-    "footer";
+    "main sidebar"
+    "footer sidebar";
   min-height: 100dvh;
   max-width: 100dvw;
 }
@@ -18,6 +19,12 @@ rvg-header {
 main {
   grid-area: main;
   padding-top: 1rem;
+  width: 100%;
+  margin-inline: auto;
+}
+
+rvg-sidebar {
+  grid-area: sidebar;
 }
 
 rvg-footer {

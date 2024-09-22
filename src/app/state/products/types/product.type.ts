@@ -1,7 +1,6 @@
 export type ProductRespons = {
   shopName: string;
   shopKeeper: string;
-  productCount: number;
   items: Product[];
 };
 
