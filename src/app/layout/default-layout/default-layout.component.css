@@ -1,0 +1,23 @@
+.grid-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  min-height: 100dvh;
+  max-width: 100dvw;
+}
+
+rvg-header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+  padding-top: 1rem;
+}
+
+rvg-footer {
+  grid-area: footer;
+}

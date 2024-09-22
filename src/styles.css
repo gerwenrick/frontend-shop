@@ -1,1 +1,94 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("styles/reset.css");
+
+:root {
+  /* Colors */
+  --primary-color: rgba(0, 123, 255, 1);
+  --primary-color-light: rgba(102, 178, 255, 1);
+  --primary-color-dark: rgba(0, 86, 179, 1);
+  --secondary-color: rgba(108, 117, 125, 1);
+  --secondary-color-light: rgba(166, 169, 173, 1);
+  --secondary-color-dark: rgba(73, 78, 82, 1);
+  --white: rgba(250, 250, 250, 1);
+  --black: rgba(20, 20, 20, 1);
+
+  /* Background Colors */
+  --background-body: rgba(245, 245, 245, 1);
+  --background-card: rgba(255, 255, 255, 1);
+  --background-button: var(--primary-color);
+
+  /* Text Colors */
+  --text-primary: rgba(33, 37, 41, 1);
+  --text-secondary: rgba(108, 117, 125, 1);
+  --text-link: var(--primary-color);
+  --text-font: var(--black);
+  --text-heading: var(--primary-color-dark);
+
+  /* Fonts */
+  --font-default: "Arial", sans-serif;
+  --font-heading: "Georgia", serif;
+
+  /* Font Sizes */
+  --font-size-default: 16px;
+  --font-size-h1: calc(var(--font-size-default) * 2.5);
+  --font-size-h2: calc(var(--font-size-default) * 2);
+  --font-size-h3: calc(var(--font-size-default) * 1.75);
+  --font-size-h4: calc(var(--font-size-default) * 1.5);
+  --font-size-h5: calc(var(--font-size-default) * 1.25);
+  --font-size-h6: calc(var(--font-size-default));
+  --font-size-p: calc(var(--font-size-default));
+
+  /* Line Heights */
+  --line-height-default: 1.5;
+  --line-height-heading: 1.2;
+
+  /* Spacing */
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
+
+  /* Border Radius */
+  --border-radius-small: 0.25rem;
+  --border-radius-medium: 0.5rem;
+  --border-radius-large: 1rem;
+
+  /* Shadows */
+  --box-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --box-shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --box-shadow-dark: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+  /* Mobile Screen */
+  --max-width-mobile: 768px;
+}
+
+html,
+body {
+  font-size: var(--font-size-default);
+  font-family: var(--font-default);
+  line-height: var(--line-height-default);
+  color: var(--text-font);
+  overflow: auto;
+}
+
+body {
+  background-color: var(--background-body);
+  color: var(--text-heading);
+  min-height: 100dvh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  line-height: var(--line-height-heading);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 2rem;
+  background-color: inherit;
+}
