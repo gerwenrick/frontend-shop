@@ -29,17 +29,22 @@
 
   /* Font Sizes */
   --font-size-default: 16px;
-  --font-size-h1: calc(var(--font-size-default) * 2.5);
-  --font-size-h2: calc(var(--font-size-default) * 2);
-  --font-size-h3: calc(var(--font-size-default) * 1.75);
-  --font-size-h4: calc(var(--font-size-default) * 1.5);
-  --font-size-h5: calc(var(--font-size-default) * 1.25);
+  --font-size-h1: calc(var(--font-size-default) * 2);
+  --font-size-h2: calc(var(--font-size-default) * 1.75);
+  --font-size-h3: calc(var(--font-size-default) * 1.5);
+  --font-size-h4: calc(var(--font-size-default) * 1.25);
+  --font-size-h5: calc(var(--font-size-default) * 1.15);
   --font-size-h6: calc(var(--font-size-default));
   --font-size-p: calc(var(--font-size-default));
 
   /* Line Heights */
   --line-height-default: 1.5;
-  --line-height-heading: 1.2;
+  --line-height-h1: calc(var(--line-height-default) * 2);
+  --line-height-h2: calc(var(--line-height-default) * 1.75);
+  --line-height-h3: calc(var(--line-height-default) * 1.5);
+  --line-height-h4: calc(var(--line-height-default) * 1.25);
+  --line-height-h5: calc(var(--line-height-default) * 1.15);
+  --line-height-h6: calc(var(--line-height-default));
 
   /* Spacing */
   --spacing-small: 0.5rem;
@@ -66,13 +71,14 @@ body {
   font-family: var(--font-default);
   line-height: var(--line-height-default);
   color: var(--text-font);
-  overflow: auto;
 }
 
 body {
   background-color: var(--background-body);
-  color: var(--text-heading);
+  color: var(--text-font);
   min-height: 100dvh;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -82,13 +88,42 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  line-height: var(--line-height-heading);
+  color: var(--text-heading);
+  font-weight: 500;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5);
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+  line-height: var(--line-height-h6);
 }
 
 .container {
-  width: 100%;
   max-width: 1200px;
-  margin-inline: auto;
-  padding-inline: 2rem;
+  margin-inline: 2rem;
   background-color: inherit;
 }

@@ -13,7 +13,6 @@
       "tags": ["clickable", "button", "interactive", "primary", "secondary"],
       "imageUrl": "https://example.com/button.png",
       "stock": 150,
-      "isFeatured": true,
       "discount": 0.1,
       "wislist": false,
       "reviews": [
@@ -31,7 +30,6 @@
       "tags": ["card", "content", "image", "text"],
       "imageUrl": "https://example.com/card.png",
       "stock": 90,
-      "isFeatured": false,
       "discount": 0.05,
       "wislist": false,
       "reviews": [
@@ -49,7 +47,6 @@
       "tags": ["link", "clickable", "navigation"],
       "imageUrl": "https://example.com/link.png",
       "stock": 300,
-      "isFeatured": false,
       "reviews": [
         { "reviewer": "Eve", "rating": 4, "comment": "Easy to style, works well." }
       ]
@@ -64,7 +61,6 @@
       "tags": ["image", "responsive", "media"],
       "imageUrl": "https://example.com/image.png",
       "stock": 200,
-      "isFeatured": true,
       "wislist": false,
       "reviews": [
         { "reviewer": "Frank", "rating": 5, "comment": "Handles various image sizes perfectly!" },
@@ -81,7 +77,6 @@
       "tags": ["list", "items", "display"],
       "imageUrl": "https://example.com/list.png",
       "stock": 100,
-      "isFeatured": false,
       "reviews": [
         { "reviewer": "Hank", "rating": 5, "comment": "Flexible and easy to use." }
       ]
@@ -96,7 +91,6 @@
       "tags": ["navbar", "navigation", "menu"],
       "imageUrl": "https://example.com/navigation.png",
       "stock": 80,
-      "isFeatured": true,
       "discount": 0.15,
       "wislist": false,
       "reviews": [
@@ -114,7 +108,6 @@
       "tags": ["container", "group", "layout"],
       "imageUrl": "https://example.com/container.png",
       "stock": 220,
-      "isFeatured": false,
       "wislist": false
     },
     {
@@ -127,7 +120,6 @@
       "tags": ["tooltip", "hover", "information"],
       "imageUrl": "https://example.com/tooltip.png",
       "stock": 250,
-      "isFeatured": false,
       "wislist": false
     },
     {
@@ -140,7 +132,6 @@
       "tags": ["avatar", "user", "image"],
       "imageUrl": "https://example.com/avatar.png",
       "stock": 120,
-      "isFeatured": true,
       "wislist": false,
       "reviews": [
         { "reviewer": "Liam", "rating": 5, "comment": "Perfect for profile pictures!" }
@@ -156,7 +147,6 @@
       "tags": ["input", "field", "form"],
       "imageUrl": "https://example.com/input.png",
       "stock": 300,
-      "isFeatured": false,
       "wislist": false
     },
     {
@@ -169,7 +159,6 @@
       "tags": ["form", "input", "submission"],
       "imageUrl": "https://example.com/form.png",
       "stock": 80,
-      "isFeatured": true,
       "wislist": false,
       "reviews": [
         { "reviewer": "Mona", "rating": 5, "comment": "Handles data well!" }
@@ -198,7 +187,6 @@
       "tags": ["radiobutton", "option", "form"],
       "imageUrl": "https://example.com/radiobutton.png",
       "stock": 350,
-      "isFeatured": false,
       "wislist": false
     },
     {
@@ -211,7 +199,7 @@
       "tags": ["pill", "badge", "highlight"],
       "imageUrl": "https://example.com/pill.png",
       "stock": 140,
-      "isFeatured": true
+      "wishlist": false
     },
     {
       "id": "15",
@@ -223,7 +211,6 @@
       "tags": ["snackbar", "message", "notification"],
       "imageUrl": "https://example.com/snackbar.png",
       "stock": 180,
-      "isFeatured": false,
       "wislist": false
     },
     {
@@ -236,7 +223,6 @@
       "tags": ["icon", "vector", "graphic"],
       "imageUrl": "https://example.com/icon.png",
       "stock": 500,
-      "isFeatured": true,
       "discount": 0.2,
       "wislist": false
     },
@@ -250,7 +236,6 @@
       "tags": ["overlay", "modal", "popup"],
       "imageUrl": "https://example.com/overlay.png",
       "stock": 110,
-      "isFeatured": false,
       "wislist": false
     },
     {
@@ -263,7 +248,7 @@
       "tags": ["sidenav", "navigation", "sidebar"],
       "imageUrl": "https://example.com/sidenav.png",
       "stock": 90,
-      "isFeatured": true
+      "wishlist": false
     },
     {
       "id": "19",
@@ -275,7 +260,6 @@
       "tags": ["divider", "separator", "layout"],
       "imageUrl": "https://example.com/divider.png",
       "stock": 300,
-      "isFeatured": false,
       "wislist": false
     },
     {
@@ -288,7 +272,6 @@
       "tags": ["datepicker", "calendar", "input", "date", "range"],
       "imageUrl": "https://example.com/datepicker.png",
       "stock": 160,
-      "isFeatured": true,
       "discount": 0.1,
       "wislist": false,
       "reviews": [

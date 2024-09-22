@@ -5,11 +5,13 @@ import { Product } from '../../state/products/types/product.type';
 import { AsyncPipe, JsonPipe } from '@angular/common';
 import { getAllProductsAction } from '../../state/products/actions/products.actions';
 import { allProductsSelector } from '../../state/products/selectors/products.selectors';
+import { CardComponent } from '../../components/card/card.component';
+import { ButtonComponent } from '../../components/button/button.component';
 
 @Component({
   selector: 'rvg-product-overview',
   standalone: true,
-  imports: [AsyncPipe, JsonPipe],
+  imports: [AsyncPipe, JsonPipe, CardComponent, ButtonComponent],
   templateUrl: './product-overview.component.html',
   styleUrl: './product-overview.component.css',
 })
@@ -22,5 +24,9 @@ export class ProductOverviewComponent implements OnInit {
 
   public ngOnInit(): void {
     this.store.dispatch(getAllProductsAction());
+  }
+
+  public addToWishlist(id: number): void {
+    console.log('Added to wishlist: ', id);
   }
 }

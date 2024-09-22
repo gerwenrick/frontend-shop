@@ -1,0 +1,42 @@
+<div class="card">
+  <div class="card-header">
+    <ng-container
+      [ngTemplateOutlet]="cardHeader || defaultCardHeader"
+    ></ng-container>
+  </div>
+
+  <div class="card-content">
+    <ng-container
+      [ngTemplateOutlet]="cardContent || defaultCardContent"
+    ></ng-container>
+  </div>
+
+  <div class="card-footer">
+    <ng-container
+      [ngTemplateOutlet]="cardFooter || defaultCardFooter"
+    ></ng-container>
+  </div>
+
+  <div class="card-content">
+    <ng-content></ng-content>
+  </div>
+</div>
+
+<ng-template #defaultCardHeader>
+  <img
+    ngSrc="https://placehold.co/600x400"
+    width="100"
+    height="100"
+    alt="Placeholder"
+    placeholder="data:image/png"
+  />
+</ng-template>
+
+<ng-template #defaultCardContent>
+  <h2 class="default">Card</h2>
+  <p class="default">This is a default card</p>
+</ng-template>
+
+<ng-template #defaultCardFooter>
+  <p class="default">Default card footer</p>
+</ng-template>
