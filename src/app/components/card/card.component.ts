@@ -10,8 +10,6 @@ import { NgOptimizedImage, NgTemplateOutlet } from '@angular/common';
   styleUrl: './card.component.css',
 })
 export class CardComponent {
-  // public product: InputSignal<Product> = input.required<Product>();
-
   @Input() cardHeader: TemplateRef<HTMLElement> | undefined;
   @Input() cardContent: TemplateRef<HTMLElement> | undefined;
   @Input() cardFooter: TemplateRef<HTMLElement> | undefined;

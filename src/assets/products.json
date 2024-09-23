@@ -14,6 +14,7 @@
       "stock": 150,
       "discount": 0.1,
       "wishlist": false,
+      "wishQuantity": 0,
       "reviews": [
         { "reviewer": "Alice", "rating": 5, "comment": "Works perfectly with any theme!" },
         { "reviewer": "Bob", "rating": 4, "comment": "Simple to use but lacks some features." }
@@ -31,6 +32,7 @@
       "stock": 90,
       "discount": 0.05,
       "wishlist": false,
+      "wishQuantity": 0,
       "reviews": [
         { "reviewer": "Charlie", "rating": 4, "comment": "Nice design but could be more flexible." },
         { "reviewer": "Diana", "rating": 5, "comment": "Perfect for showcasing content!" }
@@ -47,6 +49,7 @@
       "imageUrl": "https://example.com/link.png",
       "stock": 300,
       "wishlist": false,
+      "wishQuantity": 0,
       "reviews": [
         { "reviewer": "Eve", "rating": 4, "comment": "Easy to style, works well." }
       ]
@@ -62,6 +65,7 @@
       "imageUrl": "https://example.com/image.png",
       "stock": 200,
       "wishlist": false,
+      "wishQuantity": 0,
       "reviews": [
         { "reviewer": "Frank", "rating": 5, "comment": "Handles various image sizes perfectly!" },
         { "reviewer": "Grace", "rating": 4, "comment": "Could use more customization options." }
@@ -78,6 +82,7 @@
       "imageUrl": "https://example.com/list.png",
       "stock": 100,
       "wishlist": false,
+      "wishQuantity": 0,
 
       "reviews": [
         { "reviewer": "Hank", "rating": 5, "comment": "Flexible and easy to use." }
@@ -95,6 +100,7 @@
       "stock": 80,
       "discount": 0.15,
       "wishlist": false,
+      "wishQuantity": 0,
       "reviews": [
         { "reviewer": "Ivy", "rating": 5, "comment": "Great for multi-page websites!" },
         { "reviewer": "Jake", "rating": 5, "comment": "Very customizable and responsive." }
@@ -110,7 +116,8 @@
       "tags": ["container", "group", "layout"],
       "imageUrl": "https://example.com/container.png",
       "stock": 220,
-      "wishlist": false
+      "wishlist": false,
+      "wishQuantity": 0
     },
     {
       "id": "8",
@@ -122,7 +129,8 @@
       "tags": ["tooltip", "hover", "information"],
       "imageUrl": "https://example.com/tooltip.png",
       "stock": 250,
-      "wishlist": false
+      "wishlist": false,
+      "wishQuantity": 0
     },
     {
       "id": "9",
@@ -135,6 +143,7 @@
       "imageUrl": "https://example.com/avatar.png",
       "stock": 120,
       "wishlist": false,
+      "wishQuantity": 0,
       "reviews": [
         { "reviewer": "Liam", "rating": 5, "comment": "Perfect for profile pictures!" }
       ]
@@ -149,7 +158,8 @@
       "tags": ["input", "field", "form"],
       "imageUrl": "https://example.com/input.png",
       "stock": 300,
-      "wishlist": false
+      "wishlist": false,
+      "wishQuantity": 0
     },
     {
       "id": "11",
@@ -162,6 +172,7 @@
       "imageUrl": "https://example.com/form.png",
       "stock": 80,
       "wishlist": false,
+      "wishQuantity": 0,
       "reviews": [
         { "reviewer": "Mona", "rating": 5, "comment": "Handles data well!" }
       ]
@@ -176,7 +187,8 @@
       "tags": ["checkbox", "selection", "form"],
       "imageUrl": "https://example.com/checkbox.png",
       "stock": 400,
-      "wishlist": false
+      "wishlist": false,
+      "wishQuantity": 0
     },
     {
       "id": "13",
@@ -188,7 +200,8 @@
       "tags": ["radiobutton", "option", "form"],
       "imageUrl": "https://example.com/radiobutton.png",
       "stock": 350,
-      "wishlist": false
+      "wishlist": false,
+      "wishQuantity": 0
     },
     {
       "id": "14",
@@ -200,7 +213,8 @@
       "tags": ["pill", "badge", "highlight"],
       "imageUrl": "https://example.com/pill.png",
       "stock": 140,
-      "wishlist": false
+      "wishlist": false,
+      "wishQuantity": 0
     },
     {
       "id": "15",
@@ -212,7 +226,8 @@
       "tags": ["snackbar", "message", "notification"],
       "imageUrl": "https://example.com/snackbar.png",
       "stock": 180,
-      "wishlist": false
+      "wishlist": false,
+      "wishQuantity": 0
     },
     {
       "id": "16",
@@ -225,7 +240,8 @@
       "imageUrl": "https://example.com/icon.png",
       "stock": 500,
       "discount": 0.2,
-      "wishlist": false
+      "wishlist": false,
+      "wishQuantity": 0
     },
     {
       "id": "17",
@@ -237,7 +253,8 @@
       "tags": ["overlay", "modal", "popup"],
       "imageUrl": "https://example.com/overlay.png",
       "stock": 110,
-      "wishlist": false
+      "wishlist": false,
+      "wishQuantity": 0
     },
     {
       "id": "18",
@@ -249,7 +266,8 @@
       "tags": ["sidenav", "navigation", "sidebar"],
       "imageUrl": "https://example.com/sidenav.png",
       "stock": 90,
-      "wishlist": false
+      "wishlist": false,
+      "wishQuantity": 0
     },
     {
       "id": "19",
@@ -261,7 +279,8 @@
       "tags": ["divider", "separator", "layout"],
       "imageUrl": "https://example.com/divider.png",
       "stock": 300,
-      "wishlist": false
+      "wishlist": false,
+      "wishQuantity": 0
     },
     {
       "id": "20",
@@ -275,6 +294,7 @@
       "stock": 160,
       "discount": 0.1,
       "wishlist": false,
+      "wishQuantity": 0,
       "reviews": [
         {
           "reviewer": "Emily",

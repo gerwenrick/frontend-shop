@@ -2,7 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Product } from '../../state/products/types/product.type';
-import { AsyncPipe, JsonPipe } from '@angular/common';
+import { AsyncPipe, JsonPipe, NgOptimizedImage } from '@angular/common';
 import {
   addProductToWishlistAction,
   getAllProductsAction,
@@ -28,6 +28,7 @@ import { faCross, faHeart } from '@fortawesome/free-solid-svg-icons';
     JsonPipe,
     CardComponent,
     ButtonComponent,
+    NgOptimizedImage,
     FontAwesomeModule,
   ],
   templateUrl: './product-overview.component.html',

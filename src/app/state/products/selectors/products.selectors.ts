@@ -15,6 +15,12 @@ export function selectAllWishlistItems() {
   );
 }
 
+export function selectProductsByIds(productIds: number[]) {
+  return createSelector(productsFeatureStateSelector, (state) =>
+    state.items.filter((item) => productIds.includes(item.id)),
+  );
+}
+
 export function isProductInWishlistSelector(productId: number) {
   return createSelector(productsFeatureStateSelector, (state) =>
     state.wishlistItems.includes(productId),

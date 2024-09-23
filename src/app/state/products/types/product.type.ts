@@ -17,6 +17,7 @@ export type Product = {
   isFeatured: boolean;
   discount: number;
   wishlist: boolean;
+  wishQuantity: number;
   reviews?: Review[];
 };
 
