@@ -4,11 +4,19 @@
   @for (product of products$ | async; track product.id; let i = $index) {
     <li>
       <rvg-card
+        [cardHeader]="productHeader"
         [cardContent]="productContent"
         [cardFooter]="productAction"
       ></rvg-card>
 
-      <ng-template #productHeader> </ng-template>
+      <ng-template #productHeader>
+        <img
+          ngSrc="https://placehold.co/600x400"
+          width="150"
+          height="100"
+          alt="Placeholder"
+        />
+      </ng-template>
 
       <ng-template #productContent>
         <h2>{{ product.name }}</h2>

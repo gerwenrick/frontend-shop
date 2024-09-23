@@ -3,6 +3,7 @@ import {
   addProductToWishlistAction,
   getAllProductsSuccessAction,
   removeProductFromWishlistAction,
+  updateProductQuantityAction,
 } from './actions/products.actions';
 import { Product } from './types/product.type';
 
@@ -41,4 +42,15 @@ export const productsReducer = createReducer(
     ...state,
     wishlistItems: state.wishlistItems.filter((id) => id !== productId),
   })),
+  on(updateProductQuantityAction, (state, { productId, newQuantity }) => {
+    const updatedProducts = state.items.map((product) => {
+      if (product.id === productId) {
+        const updatedQuantity = Math.min(newQuantity, product.stock);
+        return { ...product, quantity: updatedQuantity };
+      }
+      return product;
+    });
+
+    return { ...state, products: updatedProducts };
+  }),
 );
