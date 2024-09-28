@@ -1,10 +1,10 @@
-export type ProductRespons = {
+export interface ProductRespons {
   shopName: string;
   shopKeeper: string;
   items: Product[];
-};
+}
 
-export type Product = {
+export interface Product {
   id: number;
   name: string;
   description: string;
@@ -19,10 +19,10 @@ export type Product = {
   wishlist: boolean;
   wishQuantity: number;
   reviews?: Review[];
-};
+}
 
-export type Review = {
+export interface Review {
   reviewer: string;
   rating: number;
   comment: string;
-};
+}

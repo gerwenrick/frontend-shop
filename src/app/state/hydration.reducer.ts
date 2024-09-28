@@ -1,11 +1,9 @@
-import { ActionReducer, INIT, UPDATE } from '@ngrx/store';
-import { AppState } from './app.reducer';
+import { ActionReducer, INIT, UPDATE } from "@ngrx/store";
+import { AppState } from "./app.reducer";
 
-const LOCAL_STORAGE_STATE_KEY = 'state';
+export const LOCAL_STORAGE_STATE_KEY = "state";
 
-export const hydrationMetaReducer = (
-  reducer: ActionReducer<AppState>,
-): ActionReducer<AppState> => {
+export const hydrationMetaReducer = (reducer: ActionReducer<AppState>): ActionReducer<AppState> => {
   return (state, action) => {
     if (action.type === INIT || action.type === UPDATE) {
       const storageValue = localStorage.getItem(LOCAL_STORAGE_STATE_KEY);

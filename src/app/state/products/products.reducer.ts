@@ -1,24 +1,24 @@
-import { createReducer, on } from '@ngrx/store';
+import { createReducer, on } from "@ngrx/store";
 import {
   addProductToWishlistAction,
   getAllProductsSuccessAction,
   removeProductFromWishlistAction,
   updateProductQuantityAction,
-} from './actions/products.actions';
-import { Product } from './types/product.type';
+} from "./actions/products.actions";
+import { Product } from "./types/product.type";
 
-export const PRODUCT_FEATURE_KEY = 'products';
+export const PRODUCT_FEATURE_KEY = "products";
 
-export type ProductFeatureState = {
+export interface ProductFeatureState {
   shopName: string;
   shopKeeper: string;
   items: Product[];
   wishlistItems: number[];
-};
+}
 
 export const initialProductsState: ProductFeatureState = {
-  shopName: '',
-  shopKeeper: '',
+  shopName: "",
+  shopKeeper: "",
   items: [],
   wishlistItems: [],
 };
@@ -52,5 +52,5 @@ export const productsReducer = createReducer(
     });
 
     return { ...state, products: updatedProducts };
-  }),
+  })
 );

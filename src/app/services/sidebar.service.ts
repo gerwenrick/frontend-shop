@@ -1,15 +1,13 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Injectable } from "@angular/core";
+import { BehaviorSubject } from "rxjs";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class SidebarService {
-  private showSidebar: boolean = false;
+  private showSidebar = false;
 
-  public onShowSidebarChange$: BehaviorSubject<boolean> = new BehaviorSubject(
-    this.showSidebar,
-  );
+  public onShowSidebarChange$ = new BehaviorSubject(this.showSidebar);
 
   public toggleSidebar() {
     this.showSidebar = !this.showSidebar;
