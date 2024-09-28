@@ -3,19 +3,10 @@
 <ul class="product-list">
   @for (product of products$ | async; track product.id; let i = $index) {
     <li>
-      <rvg-card
-        [cardHeader]="productHeader"
-        [cardContent]="productContent"
-        [cardFooter]="productAction"
-      ></rvg-card>
+      <rvg-card [cardHeader]="productHeader" [cardContent]="productContent" [cardFooter]="productAction"></rvg-card>
 
       <ng-template #productHeader>
-        <img
-          ngSrc="https://placehold.co/600x400"
-          width="150"
-          height="100"
-          alt="Placeholder"
-        />
+        <img ngSrc="https://placehold.co/600x400" width="150" height="100" alt="Placeholder" priority />
       </ng-template>
 
       <ng-template #productContent>
@@ -26,7 +17,7 @@
       </ng-template>
 
       <ng-template #productAction>
-        @if (!(isProductInWishlist$(product.id) | async)) {
+        @if ((isProductInWishlist$(product.id) | async) === false) {
           <rvg-button
             buttonText="Add to wishlist"
             (buttonClick)="addToWishlist(product.id)"
@@ -34,7 +25,7 @@
           ></rvg-button>
         } @else {
           <rvg-button
-            buttonText="Remove to from"
+            buttonText="Remove to from wishlist"
             (buttonClick)="removeFromWishlist(product.id)"
             [isAdding]="false"
           ></rvg-button>
