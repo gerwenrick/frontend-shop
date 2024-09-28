@@ -70,6 +70,11 @@
   --max-width-mobile: 768px;
 }
 
+*:focus-visible {
+  outline: 0.25rem solid var(--secondary-color-light);
+  outline-offset: 0.25rem;
+}
+
 html,
 body {
   font-size: var(--font-size-default);

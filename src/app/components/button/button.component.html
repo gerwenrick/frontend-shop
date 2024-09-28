@@ -1,6 +1,8 @@
 <button
   (click)="emitClickEvent($event)"
+  (keypress)="emitClickEvent($event)"
   [class]="isAdding() ? 'button-primary' : 'button-secondary'"
+  [disabled]="isDisabled()"
 >
   {{ buttonText() }}
   <fa-icon [icon]="isAdding() ? faHeart : faTrash"></fa-icon>
