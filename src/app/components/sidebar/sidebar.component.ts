@@ -1,7 +1,7 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, OnDestroy } from '@angular/core';
 import { SidebarService } from '../../services/sidebar.service';
-import { AsyncPipe, JsonPipe, NgClass } from '@angular/common';
-import { map, Observable, Subject, switchMap, takeUntil } from 'rxjs';
+import { AsyncPipe, NgClass } from '@angular/common';
+import { map, Subject, switchMap, takeUntil } from 'rxjs';
 import { Store } from '@ngrx/store';
 import {
   selectAllWishlistItems,
@@ -9,21 +9,22 @@ import {
 } from '../../state/products/selectors/products.selectors';
 import { CardComponent } from '../card/card.component';
 import { updateProductQuantityAction } from '../../state/products/actions/products.actions';
+import { WishlistFormComponent } from '../wishlist-form/wishlist-form.component';
 
 @Component({
   selector: 'rvg-sidebar',
   standalone: true,
-  imports: [NgClass, AsyncPipe, JsonPipe, CardComponent],
+  imports: [NgClass, AsyncPipe, CardComponent, WishlistFormComponent],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css',
 })
-export class SidebarComponent implements OnInit {
-  private unsubscribe$: Subject<void> = new Subject();
+export class SidebarComponent implements OnInit, OnDestroy {
+  private unsubscribe$ = new Subject<void>();
 
   public sidebarService: SidebarService = inject(SidebarService);
   public store: Store = inject(Store);
 
-  public isOpen: boolean = false;
+  public isOpen = false;
   public wishlistItems$ = this.store.select(selectAllWishlistItems()).pipe(
     switchMap((wishlistItemsIds) =>
       this.store.select(selectProductsByIds(wishlistItemsIds)),
@@ -31,7 +32,7 @@ export class SidebarComponent implements OnInit {
     map((items) => items),
   );
 
-  public newQuantity: number = 5;
+  public newQuantity = 5;
 
   public ngOnInit(): void {
     this.sidebarService.onShowSidebarChange$
@@ -53,5 +54,7 @@ export class SidebarComponent implements OnInit {
     );
   }
 
-  public submitForm(wishlistItemId: number): void {}
+  public submitForm(wishlistItemId: number): void {
+    console.log(`Added item with id: ${wishlistItemId}`)
+  }
 }

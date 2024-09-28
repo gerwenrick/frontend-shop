@@ -1,36 +1,21 @@
 <aside [ngClass]="{ hideSidebar: !isOpen }">
   <h1>Sidebar</h1>
-  <ul>
-    @for (wishlistItem of wishlistItems$ | async; track wishlistItem.id) {
-      <li>
-        <rvg-card [cardContent]="wishlistItemContent"></rvg-card>
 
-        <ng-template #wishlistItemContent>
-          <h3>{{ wishlistItem.name }}</h3>
+  @if ((wishlistItems$ | async)?.length) {
+    <ul>
+      @for (wishlistItem of wishlistItems$ | async; track wishlistItem.id) {
+        <li>
+          <rvg-card [cardContent]="wishlistItemContent"></rvg-card>
 
-          <form (submit)="submitForm(wishlistItem.id)">
-            <div class="form-group">
-              <input type="number" [value]="wishlistItem.wishQuantity" />
-              <button type="submit">Update</button>
-            </div>
-          </form>
+          <ng-template #wishlistItemContent>
+            <h3>{{ wishlistItem.name }}</h3>
 
-          <!-- <input
-            type="number"
-            min="0"
-            [value]="wishlistItem.wishQuantity"
-            (change)="onQuantityChange(wishlistItem.id, value)"
-          /> -->
-
-          <p>{{ wishlistItem.stock }}</p>
-        </ng-template>
-      </li>
-    }
-  </ul>
-
-  <pre>
-    <code>
-      {{wishlistItems$ | async | json }}
-    </code>
-  </pre>
+            <rvg-wishlist-form [wishlistItem]="wishlistItem"></rvg-wishlist-form>
+          </ng-template>
+        </li>
+      }
+    </ul>
+  } @else {
+    <p>You have nothing to wish for...</p>
+  }
 </aside>

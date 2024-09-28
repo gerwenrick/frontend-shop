@@ -1,0 +1,16 @@
+<h3 style="font-weight: 900">Wishlist Form</h3>
+
+<form [formGroup]="wishlistItemFormGroup">
+  <input type="number" name="Item Quantity" id="item-quantity" formControlName="itemQuantity" />
+
+  <p>
+    Items still in stock: <span class="stock-items">{{ wishlistItem.stock }}</span>
+  </p>
+
+  <rvg-button
+    buttonText="Change your wish quantity!"
+    [isAdding]="false"
+    [isDisabled]="wishlistItemFormGroup.invalid"
+    (buttonClick)="onSubmit()"
+  ></rvg-button>
+</form>
