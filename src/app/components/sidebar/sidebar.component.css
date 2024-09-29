@@ -7,16 +7,12 @@ aside {
   padding-inline: 0.5rem;
   width: var(--sidebar-width);
   height: 100%;
-  border: 1px solid var(--primary-color-light);
   background-color: var(--background-body);
   box-shadow: var(--box-shadow-dark);
   transition: 0.15s ease-in-out all;
-  overflow: hidden;
 
   &.hideSidebar {
-    width: 0;
-    right: calc(-1rem - 2px);
-    box-shadow: none;
+    right: calc(-1rem - var(--sidebar-width));
 
     &:after {
       display: none;

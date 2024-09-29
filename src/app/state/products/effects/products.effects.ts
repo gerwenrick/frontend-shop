@@ -1,36 +1,36 @@
-import { Injectable } from '@angular/core';
-import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { ProductsService } from '../../../services/products.service';
+import { Injectable } from "@angular/core";
+import { Actions, createEffect, ofType } from "@ngrx/effects";
+import { ProductsService } from "../../../services/products.service";
 import {
-  GET_ALL_PRODUCTS_ACTION,
+  getAllProductsAction,
   getAllProductsErrorAction,
   getAllProductsSuccessAction,
-} from '../actions/products.actions';
-import { catchError, exhaustMap, map, of } from 'rxjs';
+} from "../actions/products.actions";
+import { catchError, exhaustMap, map, of } from "rxjs";
 
 @Injectable()
 export class ProductsEffects {
   getAllProjects$ = createEffect(
     () => {
       return this.actions$.pipe(
-        ofType(GET_ALL_PRODUCTS_ACTION),
+        ofType(getAllProductsAction.type),
         exhaustMap(() =>
           this.productsService.getAllProducts$().pipe(
             map((productsRespons) =>
               getAllProductsSuccessAction({
-                products: productsRespons.items,
-              }),
+                updatedProducts: productsRespons.items,
+              })
             ),
-            catchError((error) => of(getAllProductsErrorAction({ error }))),
-          ),
-        ),
+            catchError((error) => of(getAllProductsErrorAction({ error })))
+          )
+        )
       );
     },
-    { functional: true },
+    { functional: true }
   );
 
   constructor(
     private actions$: Actions,
-    private productsService: ProductsService,
+    private productsService: ProductsService
   ) {}
 }
