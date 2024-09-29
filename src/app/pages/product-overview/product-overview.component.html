@@ -12,9 +12,8 @@
 
         <ng-template #productContent>
           <h2>{{ product.name }}</h2>
-          @for (category of product.categories; track $index) {
-            <p>{{ category }}</p>
-          }
+
+          <rvg-pill [pillItems]="product.categories"></rvg-pill>
         </ng-template>
 
         <ng-template #productAction>

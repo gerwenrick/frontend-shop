@@ -13,11 +13,12 @@ import { CardComponent } from "../../components/card/card.component";
 import { ButtonComponent } from "../../components/button/button.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { IconDefinition, faHeart, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { PillComponent } from "../../components/pill/pill.component";
 
 @Component({
   selector: "rvg-product-overview",
   standalone: true,
-  imports: [AsyncPipe, JsonPipe, CardComponent, ButtonComponent, NgOptimizedImage, FontAwesomeModule],
+  imports: [AsyncPipe, JsonPipe, CardComponent, ButtonComponent, NgOptimizedImage, FontAwesomeModule, PillComponent],
   templateUrl: "./product-overview.component.html",
   styleUrl: "./product-overview.component.css",
 })
