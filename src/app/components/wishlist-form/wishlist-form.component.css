@@ -1,12 +1,32 @@
 .wishlist-form {
   max-width: 100%;
+  margin-bottom: 0.5rem;
+
+  .form-group {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
 
   input {
     max-width: 3rem;
     width: 100%;
   }
-}
 
-.stock-items {
-  font-weight: 600;
+  .stock-items {
+    margin-bottom: 1rem;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  .form-error {
+    color: var(--text-alert);
+    display: block;
+    width: 100%;
+    margin-top: -0.75rem;
+    font-size: 0.9rem;
+  }
 }

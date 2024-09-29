@@ -1,21 +1,26 @@
 <form [formGroup]="wishlistItemFormGroup" (ngSubmit)="onSubmit()" class="wishlist-form">
-  <label for="product-quantity">Product Quantity</label>
-  <input
-    type="number"
-    name="Product Quantity"
-    id="product-quantity"
-    formControlName="productQuantity"
-    min="0"
-    [max]="itemsInStock$ | async"
-  />
+  <div class="form-group">
+    <label for="product-quantity">Product Quantity</label>
+    <input
+      type="number"
+      name="Product Quantity"
+      id="product-quantity"
+      formControlName="productQuantity"
+      min="0"
+      [max]="itemsInStock$ | async"
+    />
+    @if (wishlistItemFormGroup.controls["productQuantity"].errors?.["maximumAmountExceeded"]) {
+      <div class="form-error">Dial down your wishes, please!</div>
+    }
+  </div>
 
-  <p>
-    Items still in stock: <span class="stock-items">{{ itemsInStock$ | async }}</span>
+  <p class="stock-items">
+    Items still in stock: <span>{{ itemsInStock$ | async }}</span>
   </p>
 
   <rvg-button
-    buttonText="Change your wish quantity!"
+    buttonText="Update the quantity!"
     [isAdding]="false"
-    [isDisabled]="wishlistItemFormGroup.invalid"
+    [isDisabled]="wishlistItemFormGroup.invalid || !wishlistItemFormGroup.dirty"
   ></rvg-button>
 </form>
