@@ -5,5 +5,8 @@
   [disabled]="isDisabled()"
 >
   {{ buttonText() }}
-  <fa-icon [icon]="isAdding() ? faHeart : faTrash"></fa-icon>
+
+  @if (buttonIcon) {
+    <fa-icon [icon]="buttonIcon"></fa-icon>
+  }
 </button>

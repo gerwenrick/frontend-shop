@@ -11,8 +11,8 @@ import {
 import { isProductInWishlistSelector, selectAllProducts } from "../../state/products/selectors/products.selectors";
 import { CardComponent } from "../../components/card/card.component";
 import { ButtonComponent } from "../../components/button/button.component";
-import { FontAwesomeModule, IconDefinition } from "@fortawesome/angular-fontawesome";
-import { faCross, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { IconDefinition, faHeart, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: "rvg-product-overview",
@@ -23,7 +23,7 @@ import { faCross, faHeart } from "@fortawesome/free-solid-svg-icons";
 })
 export class ProductOverviewComponent implements OnInit {
   public faHeart: IconDefinition = faHeart;
-  public faCross: IconDefinition = faCross;
+  public faTrash: IconDefinition = faTrash;
 
   private store: Store = inject(Store);
 

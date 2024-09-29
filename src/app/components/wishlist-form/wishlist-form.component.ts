@@ -25,7 +25,6 @@ export class WishlistFormComponent implements OnInit {
   public wishlistItemFormGroup!: FormGroup;
 
   public itemsInStock$: Observable<number | null> | undefined;
-  public productMaxStock$: Observable<number | null> | undefined;
 
   public ngOnInit(): void {
     this.setupFormGroup();
@@ -41,6 +40,7 @@ export class WishlistFormComponent implements OnInit {
         newQuantity: this.wishlistItemFormGroup.value.productQuantity!,
       })
     );
+    this.wishlistItemFormGroup.markAsPristine();
   }
 
   private setupFormGroup(): void {

@@ -1,40 +1,42 @@
 <h1>Products</h1>
 
-<ul class="product-list">
-  @for (product of products$ | async; track product.id; let i = $index) {
-    <li>
-      <rvg-card [cardHeader]="productHeader" [cardContent]="productContent" [cardFooter]="productAction"></rvg-card>
+@if (products$ | async) {
+  <ul class="product-list">
+    @for (product of products$ | async; track product.id; let i = $index) {
+      <li>
+        <rvg-card [cardHeader]="productHeader" [cardContent]="productContent" [cardFooter]="productAction"></rvg-card>
 
-      <ng-template #productHeader>
-        <img ngSrc="https://placehold.co/600x400" width="150" height="100" alt="Placeholder" priority />
-      </ng-template>
+        <ng-template #productHeader>
+          <img ngSrc="https://placehold.co/600x400" width="150" height="100" alt="Placeholder" priority />
+        </ng-template>
 
-      <ng-template #productContent>
-        <p>Id: {{ product.id }}</p>
-        <p>Stock: {{ product.stock }}</p>
-        <p>wishQuantity: {{ product.wishQuantity }}</p>
+        <ng-template #productContent>
+          <h2>{{ product.name }}</h2>
+          @for (category of product.categories; track $index) {
+            <p>{{ category }}</p>
+          }
+        </ng-template>
 
-        <h2>{{ product.name }}</h2>
-        @for (category of product.categories; track $index) {
-          <p>{{ category }}</p>
-        }
-      </ng-template>
-
-      <ng-template #productAction>
-        @if ((isProductInWishlist$(product.id) | async) === false) {
-          <rvg-button
-            buttonText="Add to wishlist"
-            (buttonClick)="addToWishlist(product.id)"
-            [isAdding]="true"
-          ></rvg-button>
-        } @else {
-          <rvg-button
-            buttonText="Remove to from wishlist"
-            (buttonClick)="removeFromWishlist(product.id)"
-            [isAdding]="false"
-          ></rvg-button>
-        }
-      </ng-template>
-    </li>
-  }
-</ul>
+        <ng-template #productAction>
+          @if ((isProductInWishlist$(product.id) | async) === false) {
+            <rvg-button
+              buttonText="Add to wishlist"
+              (buttonClick)="addToWishlist(product.id)"
+              [isAdding]="true"
+              [buttonIcon]="faHeart"
+            ></rvg-button>
+          } @else {
+            <rvg-button
+              buttonText="Remove to from wishlist"
+              (buttonClick)="removeFromWishlist(product.id)"
+              [isAdding]="false"
+              [buttonIcon]="faTrash"
+            ></rvg-button>
+          }
+        </ng-template>
+      </li>
+    }
+  </ul>
+} @else {
+  <p>Lets prepare some UI</p>
+}
