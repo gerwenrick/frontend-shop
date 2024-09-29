@@ -1,5 +1,5 @@
 import { Component, inject, Input, OnInit } from "@angular/core";
-import { FormBuilder, ReactiveFormsModule, Validators } from "@angular/forms";
+import { FormBuilder, FormGroup, ReactiveFormsModule } from "@angular/forms";
 import { ButtonComponent } from "../button/button.component";
 import { Product } from "../../state/products/types/product.type";
 import { Store } from "@ngrx/store";
@@ -7,6 +7,7 @@ import { updateProductQuantityAction } from "../../state/products/actions/produc
 import { selectProductCurrentStockById } from "../../state/products/selectors/products.selectors";
 import { AsyncPipe } from "@angular/common";
 import { Observable } from "rxjs";
+import { maximumItemAmountValidator } from "./custom-validators";
 
 @Component({
   selector: "rvg-wishlist-form",
@@ -21,20 +22,15 @@ export class WishlistFormComponent implements OnInit {
   private formBuilder: FormBuilder = inject(FormBuilder);
   private store: Store = inject(Store);
 
-  public wishlistItemFormGroup = this.formBuilder.group({
-    productQuantity: [0, [Validators.required]],
-  });
+  public wishlistItemFormGroup!: FormGroup;
 
   public itemsInStock$: Observable<number | null> | undefined;
   public productMaxStock$: Observable<number | null> | undefined;
 
   public ngOnInit(): void {
+    this.setupFormGroup();
     if (this.wishlistItem) {
       this.itemsInStock$ = this.store.select(selectProductCurrentStockById(+this.wishlistItem.id));
-
-      this.wishlistItemFormGroup.patchValue({
-        productQuantity: this.wishlistItem.wishQuantity,
-      });
     }
   }
 
@@ -45,5 +41,11 @@ export class WishlistFormComponent implements OnInit {
         newQuantity: this.wishlistItemFormGroup.value.productQuantity!,
       })
     );
+  }
+
+  private setupFormGroup(): void {
+    this.wishlistItemFormGroup = this.formBuilder.group({
+      productQuantity: [this.wishlistItem.wishQuantity, [maximumItemAmountValidator(this.wishlistItem.stock)]],
+    });
   }
 }

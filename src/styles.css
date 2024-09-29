@@ -2,12 +2,12 @@
 
 :root {
   /* Colors */
-  --primary-color: rgba(0, 123, 255, 1);
-  --primary-color-light: rgba(102, 178, 255, 1);
-  --primary-color-dark: rgba(0, 86, 179, 1);
-  --secondary-color: rgba(255, 87, 34, 1);
-  --secondary-color-light: rgba(255, 138, 101, 1);
-  --secondary-color-dark: rgba(183, 50, 23, 1);
+  --primary-color: rgb(0, 123, 255);
+  --primary-color-light: rgb(102, 178, 255);
+  --primary-color-dark: rgb(0, 86, 179);
+  --secondary-color: rgb(40, 167, 69);
+  --secondary-color-light: rgb(113, 216, 138);
+  --secondary-color-dark: rgb(28, 116, 48);
   --white: rgba(250, 250, 250, 1);
   --black: rgba(20, 20, 20, 1);
 
@@ -23,8 +23,8 @@
   --text-font: var(--black);
   --text-heading: var(--primary-color-dark);
 
-  /* Backdrop Colors */
-  --backdrop: rgba(0, 0, 0, 0.5);
+  /** Status Colors */
+  --text-alert: rgba(255, 69, 69);
 
   /* Fonts */
   --font-default: "Arial", sans-serif;
