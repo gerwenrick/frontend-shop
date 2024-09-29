@@ -7,7 +7,7 @@ import { updateProductQuantityAction } from "../../state/products/actions/produc
 import { selectProductCurrentStockById } from "../../state/products/selectors/products.selectors";
 import { AsyncPipe } from "@angular/common";
 import { Observable } from "rxjs";
-import { maximumItemAmountValidator } from "./custom-validators";
+import { maximumItemAmountValidator } from "./maximum-item-amout.validator";
 
 @Component({
   selector: "rvg-wishlist-form",
