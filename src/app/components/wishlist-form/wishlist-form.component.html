@@ -1,16 +1,21 @@
-<h3 style="font-weight: 900">Wishlist Form</h3>
-
-<form [formGroup]="wishlistItemFormGroup">
-  <input type="number" name="Item Quantity" id="item-quantity" formControlName="itemQuantity" />
+<form [formGroup]="wishlistItemFormGroup" (ngSubmit)="onSubmit()" class="wishlist-form">
+  <label for="product-quantity">Product Quantity</label>
+  <input
+    type="number"
+    name="Product Quantity"
+    id="product-quantity"
+    formControlName="productQuantity"
+    min="0"
+    [max]="itemsInStock$ | async"
+  />
 
   <p>
-    Items still in stock: <span class="stock-items">{{ wishlistItem.stock }}</span>
+    Items still in stock: <span class="stock-items">{{ itemsInStock$ | async }}</span>
   </p>
 
   <rvg-button
     buttonText="Change your wish quantity!"
     [isAdding]="false"
     [isDisabled]="wishlistItemFormGroup.invalid"
-    (buttonClick)="onSubmit()"
   ></rvg-button>
 </form>

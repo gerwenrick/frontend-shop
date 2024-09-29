@@ -25,9 +25,9 @@ export const initialProductsState: ProductFeatureState = {
 
 export const productsReducer = createReducer(
   initialProductsState,
-  on(getAllProductsSuccessAction, (state, { products }) => ({
+  on(getAllProductsSuccessAction, (state, { updatedProducts }) => ({
     ...state,
-    items: products,
+    items: updatedProducts,
   })),
   on(addProductToWishlistAction, (state, { productId }) => {
     if (state.wishlistItems.includes(productId)) {
@@ -43,14 +43,13 @@ export const productsReducer = createReducer(
     wishlistItems: state.wishlistItems.filter((id) => id !== productId),
   })),
   on(updateProductQuantityAction, (state, { productId, newQuantity }) => {
-    const updatedProducts = state.items.map((product) => {
-      if (product.id === productId) {
-        const updatedQuantity = Math.min(newQuantity, product.stock);
-        return { ...product, quantity: updatedQuantity };
+    const updatedProducts = state.items.map((item) => {
+      if (Number(item.id) === productId) {
+        return { ...item, wishQuantity: newQuantity };
       }
-      return product;
+      return item;
     });
 
-    return { ...state, products: updatedProducts };
+    return { ...state, items: updatedProducts };
   })
 );

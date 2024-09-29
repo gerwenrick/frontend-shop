@@ -1,3 +1,12 @@
+.wishlist-form {
+  max-width: 100%;
+
+  input {
+    max-width: 3rem;
+    width: 100%;
+  }
+}
+
 .stock-items {
   font-weight: 600;
 }

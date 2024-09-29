@@ -3,7 +3,7 @@
   <nav class="favourites">
     <fa-icon
       [icon]="faHeart"
-      [attr.data-badge]="wishlistItems$ | async"
+      [attr.data-badge]="(wishlistItems$ | async)! > 0 ? (wishlistItems$ | async) : null"
       (click)="sidebarService.toggleSidebar()"
       (keypress)="sidebarService.toggleSidebar()"
     ></fa-icon>

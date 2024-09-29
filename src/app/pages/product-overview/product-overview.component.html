@@ -10,6 +10,10 @@
       </ng-template>
 
       <ng-template #productContent>
+        <p>Id: {{ product.id }}</p>
+        <p>Stock: {{ product.stock }}</p>
+        <p>wishQuantity: {{ product.wishQuantity }}</p>
+
         <h2>{{ product.name }}</h2>
         @for (category of product.categories; track $index) {
           <p>{{ category }}</p>
