@@ -21,7 +21,10 @@ export class ProductsEffects {
                 updatedProducts: productsRespons.items,
               })
             ),
-            catchError((error) => of(getAllProductsErrorAction({ error })))
+            catchError((error) => {
+              console.error(`Something went wrong: ${error}`);
+              return of(getAllProductsErrorAction({ error }));
+            })
           )
         )
       );

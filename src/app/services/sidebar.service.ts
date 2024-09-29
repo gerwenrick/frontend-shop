@@ -7,7 +7,7 @@ import { BehaviorSubject } from "rxjs";
 export class SidebarService {
   private showSidebar = false;
 
-  public onShowSidebarChange$ = new BehaviorSubject(this.showSidebar);
+  public onShowSidebarChange$ = new BehaviorSubject<boolean>(this.showSidebar);
 
   public toggleSidebar() {
     this.showSidebar = !this.showSidebar;
