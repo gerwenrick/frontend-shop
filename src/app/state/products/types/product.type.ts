@@ -10,7 +10,7 @@ export interface Product {
   description: string;
   rating: number;
   price: number;
-  categories: string[];
+  categories: ProductCategory[];
   tags: string[];
   imageUrl: string;
   stock: number;
@@ -20,6 +20,18 @@ export interface Product {
   wishQuantity: number;
   reviews?: Review[];
 }
+
+export type ProductCategory =
+  | "UI"
+  | "Component"
+  | "Interaction"
+  | "Layout"
+  | "Navigation"
+  | "Media"
+  | "Display"
+  | "User"
+  | "Forms"
+  | "Notifications";
 
 export interface Review {
   reviewer: string;

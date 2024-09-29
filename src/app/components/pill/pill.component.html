@@ -1,0 +1,7 @@
+<div class="pill-container">
+  @for (pillItem of pillItems; track $index) {
+    <span [ngStyle]="{ 'background-color': colors[pillItem] }">
+      {{ pillItem }}
+    </span>
+  }
+</div>
