@@ -5,7 +5,11 @@
     <ul>
       @for (wishlistItem of wishlistItems$ | async; track wishlistItem.id) {
         <li>
-          <rvg-card [cardContent]="wishlistItemContent"></rvg-card>
+          <rvg-card [cardContent]="wishlistItemContent" [cardHeader]="wislistItemHeader"></rvg-card>
+
+          <ng-template #wislistItemHeader>
+            <img [ngSrc]="wishlistItem.imageUrl" [alt]="wishlistItem.name" fill priority />
+          </ng-template>
 
           <ng-template #wishlistItemContent>
             <h3>{{ wishlistItem.name }}</h3>

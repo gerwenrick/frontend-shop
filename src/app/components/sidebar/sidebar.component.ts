@@ -1,6 +1,6 @@
 import { Component, inject, OnInit, OnDestroy } from "@angular/core";
 import { SidebarService } from "../../services/sidebar.service";
-import { AsyncPipe, NgClass } from "@angular/common";
+import { AsyncPipe, NgClass, NgOptimizedImage } from "@angular/common";
 import { map, Subject, switchMap, takeUntil } from "rxjs";
 import { Store } from "@ngrx/store";
 import { selectAllWishlistItems, selectProductsByIds } from "../../state/products/selectors/products.selectors";
@@ -10,7 +10,7 @@ import { WishlistFormComponent } from "../wishlist-form/wishlist-form.component"
 @Component({
   selector: "rvg-sidebar",
   standalone: true,
-  imports: [NgClass, AsyncPipe, CardComponent, WishlistFormComponent],
+  imports: [NgClass, AsyncPipe, CardComponent, WishlistFormComponent, NgOptimizedImage],
   templateUrl: "./sidebar.component.html",
   styleUrl: "./sidebar.component.css",
 })
