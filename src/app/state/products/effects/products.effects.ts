@@ -6,7 +6,7 @@ import {
   getAllProductsErrorAction,
   getAllProductsSuccessAction,
 } from "../actions/products.actions";
-import { catchError, exhaustMap, map, of } from "rxjs";
+import { catchError, map, of, switchMap } from "rxjs";
 
 @Injectable()
 export class ProductsEffects {
@@ -14,7 +14,7 @@ export class ProductsEffects {
     () => {
       return this.actions$.pipe(
         ofType(getAllProductsAction.type),
-        exhaustMap(() =>
+        switchMap(() =>
           this.productsService.getAllProducts$().pipe(
             map((productsRespons) =>
               getAllProductsSuccessAction({

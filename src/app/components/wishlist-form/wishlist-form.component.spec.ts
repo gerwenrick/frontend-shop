@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { WishlistFormComponent } from "./wishlist-form.component";
-import { MockProduct } from "../../mocks/product.mock";
+import { createMockProduct } from "../../mocks/objects/product.mock";
 import { provideStore } from "@ngrx/store";
 
 describe("WishlistFormComponent", () => {
@@ -17,7 +17,7 @@ describe("WishlistFormComponent", () => {
     fixture = TestBed.createComponent(WishlistFormComponent);
     component = fixture.componentInstance;
 
-    component.wishlistItem = MockProduct;
+    component.wishlistItem = createMockProduct();
 
     fixture.detectChanges();
   });
