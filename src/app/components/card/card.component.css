@@ -12,9 +12,16 @@
     box-shadow: var(--box-shadow-dark);
   }
 
+  .card-header:has(img) {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+  }
+
   img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
   }
 
   .card-content,
