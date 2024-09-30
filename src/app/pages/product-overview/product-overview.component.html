@@ -7,7 +7,7 @@
         <rvg-card [cardHeader]="productHeader" [cardContent]="productContent" [cardFooter]="productAction"></rvg-card>
 
         <ng-template #productHeader>
-          <img ngSrc="https://placehold.co/600x400" width="150" height="100" alt="Placeholder" priority />
+          <img [ngSrc]="product.imageUrl" [alt]="product.name" fill priority />
         </ng-template>
 
         <ng-template #productContent>

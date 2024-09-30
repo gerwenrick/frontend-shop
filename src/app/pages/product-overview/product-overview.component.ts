@@ -2,7 +2,7 @@ import { Component, inject, OnInit } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { Observable } from "rxjs";
 import { Product } from "../../state/products/types/product.type";
-import { AsyncPipe, JsonPipe, NgOptimizedImage } from "@angular/common";
+import { AsyncPipe, IMAGE_CONFIG, JsonPipe, NgOptimizedImage } from "@angular/common";
 import {
   addProductToWishlistAction,
   getAllProductsAction,
@@ -19,6 +19,14 @@ import { PillComponent } from "../../components/pill/pill.component";
   selector: "rvg-product-overview",
   standalone: true,
   imports: [AsyncPipe, JsonPipe, CardComponent, ButtonComponent, NgOptimizedImage, FontAwesomeModule, PillComponent],
+  providers: [
+    {
+      provide: IMAGE_CONFIG,
+      useValue: {
+        placeholderResolution: 40,
+      },
+    },
+  ],
   templateUrl: "./product-overview.component.html",
   styleUrl: "./product-overview.component.css",
 })
